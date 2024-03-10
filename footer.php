@@ -84,20 +84,30 @@
     <?php $services_block_mobile = get_field('services_block_mobile', get_the_ID()) ? get_field('services_block_mobile', get_the_ID()) : []; ?>
 
     <div class="mb-service flex-column justify-content-center align-items-center mt-5 py-4">
-        <h1 style="color: #fff;"><?php echo $services_block_mobile['title']; ?></h1>
-        <p class="text-center mt-3" style="width: 300px; color: #fff;"><?php echo $services_block_mobile['text']; ?></p>
+        <?php if(array_key_exists('title', $services_block_mobile)): ?>
+            <h1 style="color: #fff;"><?php echo $services_block_mobile['title']; ?></h1>
+        <?php endif; ?>
+        <?php if(array_key_exists('text', $services_block_mobile)): ?>
+            <p class="text-center mt-3" style="width: 300px; color: #fff;"><?php echo $services_block_mobile['text']; ?></p>
+        <?php endif; ?>
         <div class="allmb-services d-flex justify-content-center align-items-center mt-4">
-            <img src="<?php echo $services_block_mobile['image']['sizes']['large']; ?>" alt="">
+            <?php if(array_key_exists('image', $services_block_mobile)): ?>
+                <img src="<?php echo $services_block_mobile['image']['sizes']['large']; ?>" alt="">
+            <?php endif; ?>
             <div class="d-flex flex-column">
-                <?php foreach( $services_block_mobile['services'] as $service ): ?>
-                <div class="d-flex justify-content-start align-items-center">
-                    <img src="<?php echo get_template_directory_uri();?>/small_icons/verification.png" alt="">
-                    <p class="mb-2"><?php echo $service['service']; ?></p>
-                </div>
-                <?php endforeach; ?>
+                <?php if(array_key_exists('services', $services_block_mobile)): ?>
+                    <?php foreach( $services_block_mobile['services'] as $service ): ?>
+                    <div class="d-flex justify-content-start align-items-center">
+                        <img src="<?php echo get_template_directory_uri();?>/small_icons/verification.png" alt="">
+                        <p class="mb-2"><?php echo $service['service']; ?></p>
+                    </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
         </div>
-        <a class="more-btn d-flex justify-content-center align-items-center p-2 mt-4" style="text-decoration: none; color: #fff;" href="<?php echo $services_block_mobile['link']; ?>">მეტის ნახვა <img src="<?php echo get_template_directory_uri();?>/small_icons/arrow-right.png" alt=""></a>
+        <?php if(array_key_exists('link', $services_block_mobile)): ?>
+            <a class="more-btn d-flex justify-content-center align-items-center p-2 mt-4" style="text-decoration: none; color: #fff;" href="<?php echo $services_block_mobile['link']; ?>">მეტის ნახვა <img src="<?php echo get_template_directory_uri();?>/small_icons/arrow-right.png" alt=""></a>
+        <?php endif; ?>
     </div>
 
     
