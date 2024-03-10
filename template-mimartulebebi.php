@@ -15,46 +15,84 @@
             <?php else: ?>
                 <div class="desktop-versionfromgeo d-flex flex-column p-5 rounded-5 flex-lg-row justify-content-center">
             <?php endif; ?>
-              <div class="search-container p-3 px-4 rounded-4">
-                  <div class="input-des">
-                      <label for="formGroupExampleInput" class="form-label">მიმართულება</label>
-                      <div class="input-icons d-flex justify-content-start align-items-center mb-3">
-                          <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img src="<?php echo get_template_directory_uri(); ?>/input_desktop_elements/takeoff2.png" alt=""></i>
-                          <input style="width: 350px !important;" type="text" class="form-control" id="formGroupExampleInput" placeholder="გთხოვთ აირჩიოთ ქალაქი">
-                        </div>
-                  </div>
-                  <div class="input-des">
-                      <label for="formGroupExampleInput" class="form-label">დანიშნულება</label>
-                      <div class="input-icons d-flex justify-content-start align-items-center mb-3">
-                          <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img src="<?php echo get_template_directory_uri(); ?>/input_desktop_elements/takeoffrotate.png" alt=""></i>
-                          <input style="width: 350px !important;" type="text" class="form-control" id="formGroupExampleInput" placeholder="გთხოვთ აირჩიოთ ქალაქი">
-                        </div>
-                  </div>
-                  <div class="input-des">
-                      <label for="formGroupExampleInput" class="form-label">გამგზავრება</label>
-                      <div class="input-icons d-flex justify-content-start align-items-center mb-3">
-                          <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img src="<?php echo get_template_directory_uri(); ?>/input_elements/calendar.png" alt=""></i>
-                          <input style="width: 350px !important;" type="text" class="form-control" id="formGroupExampleInput" placeholder="გთხოვთ აირჩიოთ თარიღი">
-                        </div>
-                  </div>
-                  <div class="input-des">
-                      <label for="formGroupExampleInput" class="form-label">დაბრუნება</label>
-                      <div class="input-icons d-flex justify-content-start align-items-center mb-3">
-                          <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img src="<?php echo get_template_directory_uri(); ?>/input_elements/calendar.png" alt=""></i>
-                          <input style="width: 350px !important;" type="text" class="form-control" id="formGroupExampleInput" placeholder="გთხოვთ აირჩიოთ თარიღი">
-                        </div>
-                  </div>
-                  <div class="input-des">
-                      <label for="formGroupExampleInput" class="form-label">მგზავრები</label>
-                      <div class="input-icons d-flex justify-content-start align-items-center mb-3">
-                          <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img src="<?php echo get_template_directory_uri(); ?>/input_elements/user.png" alt=""></i>
-                          <input style="width: 350px !important;" type="text" class="form-control" id="formGroupExampleInput" placeholder="მგზავრი">
-                        </div>
-                        <div class="search-btn-des d-flex justify-content-end align-items-center">
-                            <button class="search-des p-3 rounded-4">ძიება <img class="ms-2" src="<?php echo get_template_directory_uri(); ?>/input_desktop_elements/search-des.png" alt=""></button>
-                        </div>
-                  </div>
-              </div>
+                      <form class="search-container p-3 px-4 rounded-4" action="/tours/" style="background-color: white;">
+                <div class="input-des">
+                    <label for="formGroupExampleInput" class="form-label">მიმართულება</label>
+                    <div class="input-icons d-flex justify-content-start align-items-center mb-3">
+                        <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img
+                                src="<?php echo get_template_directory_uri(); ?>/input_desktop_elements/takeoff2.png"
+                                alt=""></i>
+                        <input style="width: 350px !important;" type="text" class="form-control"
+                            id="formGroupExampleInput" placeholder="გთხოვთ აირჩიოთ ქალაქი" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">თბილისი</a></li>
+                            <li><a class="dropdown-item" href="#">ქუთაისი</a></li>
+                            <li><a class="dropdown-item" href="#">ბათუმი</a></li>
+                            <li><a class="dropdown-item" href="#">ბარსელონა</a></li>
+                            <li><a class="dropdown-item" href="#">აბუდაბი</a></li>
+                            <li><a class="dropdown-item" href="#">ვენა</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="input-des">
+                    <label for="formGroupExampleInput" class="form-label">დანიშნულება</label>
+                    <div class="input-icons d-flex justify-content-start align-items-center mb-3">
+                        <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img
+                                src="<?php echo get_template_directory_uri(); ?>/input_desktop_elements/takeoffrotate.png"
+                                alt=""></i>
+                        <input style="width: 350px !important;" type="text" class="form-control"
+                            id="formGroupExampleInput" placeholder="გთხოვთ აირჩიოთ ქალაქი" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">თბილისი</a></li>
+                            <li><a class="dropdown-item" href="#">ქუთაისი</a></li>
+                            <li><a class="dropdown-item" href="#">ბათუმი</a></li>
+                            <li><a class="dropdown-item" href="#">ბარსელონა</a></li>
+                            <li><a class="dropdown-item" href="#">აბუდაბი</a></li>
+                            <li><a class="dropdown-item" href="#">ვენა</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="input-des">
+                    <label for="formGroupExampleInput" class="form-label">გამგზავრება</label>
+                    <div class="input-icons d-flex justify-content-start align-items-center mb-3">
+                        <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img
+                                src="<?php echo get_template_directory_uri(); ?>/input_elements/calendar.png"
+                                alt=""></i>
+                        <input style="width: 350px !important;" type="text" class="form-control datepicker"
+                            placeholder="გთხოვთ აირჩიოთ თარიღი">
+                    </div>
+                </div>
+                <div class="input-des">
+                    <label for="formGroupExampleInput" class="form-label">დაბრუნება</label>
+                    <div class="input-icons d-flex justify-content-start align-items-center mb-3">
+                        <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img
+                                src="<?php echo get_template_directory_uri(); ?>/input_elements/calendar.png"
+                                alt=""></i>
+                        <input style="width: 350px !important;" type="text" class="form-control datepicker"
+                            placeholder="გთხოვთ აირჩიოთ თარიღი">
+                    </div>
+                </div>
+
+
+                <div class="input-des">
+                    <label for="formGroupExampleInput" class="form-label">მგზავრები</label>
+                    <div class="input-icons d-flex justify-content-start align-items-center mb-3">
+                        <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img
+                                src="<?php echo get_template_directory_uri(); ?>/input_elements/user.png" alt=""></i>
+                        <input style="width: 350px !important;" type="text" class="form-control"
+                            id="formGroupExampleInput" placeholder="მგზავრი">
+                    </div>
+                    <div class="search-btn-des d-flex justify-content-end align-items-center">
+                        <button class="search-des p-3 rounded-4">ძიება <img class="ms-2"
+                                src="<?php echo get_template_directory_uri(); ?>/input_desktop_elements/search-des.png"
+                                alt=""></button>
+                    </div>
+                </div>
+            </form>
               <div class="des-mainImg ms-xl-5 justify-content-start align-items-center flex-column pe-3">
                   <img class="main-desImg ms-lg-5" src="<?php echo get_template_directory_uri(); ?>/Contact/matare.png" alt="">
               </div>

@@ -85,7 +85,7 @@
                         <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img
                                 src="<?php echo get_template_directory_uri(); ?>/input_elements/calendar.png"
                                 alt=""></i>
-                        <input style="width: 350px !important;" type="text" class="form-control" id="datepicker"
+                        <input style="width: 350px !important;" type="text" class="form-control datepicker"
                             placeholder="გთხოვთ აირჩიოთ თარიღი">
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                         <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img
                                 src="<?php echo get_template_directory_uri(); ?>/input_elements/calendar.png"
                                 alt=""></i>
-                        <input style="width: 350px !important;" type="text" class="form-control" id="datepicker"
+                        <input style="width: 350px !important;" type="text" class="form-control datepicker"
                             placeholder="გთხოვთ აირჩიოთ თარიღი">
                     </div>
                 </div>
