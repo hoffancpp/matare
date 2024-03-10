@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/bower_components/bpg-nino-mtavruli/css/bpg-nino-mtavruli.min.css">
+    <title>Matare.ge</title>
+</head>
+<body>
+
+    <!-------------------top----------------->
+    <div class="top-first justify-content-between align-items-center p-1 px-4">
+        <p class="m-0">თბილისი, საქართველო</p>
+        <p class="m-0">14:40</p>
+        <div class="soc-media-img">
+            <a href="#">
+                <img src="./social media img/whatsApp.png" alt="">
+            </a>
+            <a href="#">
+                <img src="./social media img/telegram.png" alt="">
+            </a>
+            <a href="#">
+                <img src="./social media img/tiktok.png" alt="">
+            </a>
+            <a href="#">
+                <img src="./social media img/instagram.png" alt="">
+            </a>
+            <a href="#">
+                <img src="./social media img/linkedIn.png" alt="">
+            </a>
+            <a href="#">
+                <img src="./social media img/youtube.png" alt="">
+            </a>
+            <a href="#">
+                <img src="./social media img/appstore.png" alt="">
+            </a>
+            <a href="#">
+                <img src="./social media img/googleplay.png" alt="">
+            </a>
+        </div>
+    </div>
+
+
+    <!----------------Navbar---------------->
+        <nav class="px-4 py-2 d-flex justify-content-between align-items-center justify-content-lg-between">
+            <a href="./Mtavari.html">
+                <img class="logo-desktop mt-2" src="./logoDesktop.png" alt="">
+            </a>
+            <ul class="d-flex justify-content-between align-items-center justify-content-lg-center px-lg-0">
+                <li class="menu-button" onclick="showSidebar()"><a class="px-lg-2" href="#"><img src="./menu.png" alt=""></a></li>
+                <li class="hideOnMobile"><a class="px-lg-2" href="./Contact.html">კონტაქტი</a></li>
+                <li class="hideOnMobile"><a class="px-lg-2" href="./Blog.html">ბლოგი</a></li>
+
+                <li class="hideOnMobile"><a class="px-lg-2" href="./ServiceTemplate.html"> <a class="nav-link pe-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img class="ps-2" src="./polygon.png" alt="">
+                    სერვისები
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">ბარგიანი ბილეთები</a></li>
+                    <li><a class="dropdown-item" href="#">ბარგიანი ბილეთები</a></li>
+                    <li><a class="dropdown-item" href="#">ბარგიანი ბილეთები</a></li>
+                  </ul></a></li>
+
+                <li class="hideOnMobile"><a class="px-lg-2" href="./Turebi.html">ტურები</a></li>
+                <li class="hideOnMobile"><a class="px-lg-2" href="./Sastumroebi.html">სასტუმრო</a></li>
+                <li class="hideOnMobile"><a class="px-lg-2" href="./ServiceTemplate.html"> <a class="nav-link pe-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="./polygon.png" alt="">
+                    ავიაბილეთები
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./AviabiletebiFromGeo.html">საქართველოდან</a></li>
+                    <li><a class="dropdown-item" href="./AviabiletebiToGeo.html">საქართველოსკენ</a></li>
+                  </ul></a></li>
+                <li>
+                    <a href="#">
+                        <div class="logo d-flex flex-column justify-content-center align-items-center">
+                            <a href="./Mtavari.html">
+                                <img class="logo-mobile" src="./logo.png" alt="">
+                                <a class="logo-text" style="color: #fff;" href="#">იაფი ავიაბილეთები</a>
+                            </a>
+                        </div>
+                    </a>
+                </li>
+                <a href="#">
+                    <img class="showOnMobile" src="./facebook.png" alt="">
+                </a>
+            </ul>
+            <ul class="sidebar">
+                <li class="" onclick="hideSidebar()"><a href="#"><img src="./exit.png" alt=""></a></li>
+                <li><a style="color: #fff;" class="nav-link ps-2 py-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="./polygon.png" alt="">
+                    ავიაბილეთები
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./AviabiletebiFromGeo.html">საქართველოდან</a></li>
+                    <li><a class="dropdown-item" href="./AviabiletebiToGeo.html">საქართველოსკენ</a></li>
+                  </ul></a></li>
+
+                <li> <a style="color: #fff;" class="nav-link pe-2 py-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img class="ps-2" src="./polygon.png" alt="">
+                    სერვისები
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">ბარგიანი ბილეთები</a></li>
+                    <li><a class="dropdown-item" href="#">ბარგიანი ბილეთები</a></li>
+                    <li><a class="dropdown-item" href="#">ბარგიანი ბილეთები</a></li>
+                  </ul></a></li>
+
+                <li><a class="p-2" href="./Sastumroebi.html">სასტუმრო</a></li>
+                <li><a class="p-2" href="./Turebi.html">ტურები</a></li>
+                <li><a class="p-2" href="./Blog.html">ბლოგი</a></li>
+                <li><a class="p-2" href="./Contact.html">კონტაქტი</a></li>
+            </ul>
+            <div class="numbers d-lg-flex justify-content-center align-items-center flex-column">
+                <a class="rounded" href="#">+995 322 12 14 18</a>
+                <a class="rounded mt-2" href="#">+995 558 12 14 18</a>
+            </div>
+        </nav>
+
+        <!--------------------main background------------>
+
+        <p class="par ms-4">მთავარი  > კონფიდენციალურობის პოლიტიკაა</p>
+        <div class="main justify-content-center align-items-center flex-column">
+            <div class="main-back justify-content-center align-items-center rounded-5 flex-column">
+                <div class="container-p d-flex justify-content-between p-3">
+                    <div class="left-sidep justify-content-center align-items-center rounded-4 p-3">
+                        <h1 class="text-center">კონფიდენციალურობის პოლიტიკა</h1>
+                        <h3 class="mt-4">განაცხადი კონფიდენციალურობის შესახებ</h3>
+                        <p class="mt-3">MATARE.GE  (შემდეგში წოდებული როგორც  “ჩვენ”) მოხარულია/მოხარული ვართ რომ ეწვიეთ ამ ვებ-გვერდს და გამოხატეთ ინტერესი ჩვენი სერვისებისა თუ პროდუქტების მიმართ.  ჩვენ  არ წარმოვადგენთ რომელიმე ავიაკომპანიის საკუთრებას ან შვილობილ კომპანიას და   რეისის გაუქმების, გადადების  ან ბარგის დაკარგვის შემთხვევაში , ჩვენ არ ვიღებთ პასუხისმგებლობას</p>
+                        <h2 class="mt-4">ჩვენი კონფიდენციალურობის პრინციპები </h2>
+                        <p class="mt-2">თითოეული მომხმარებლის კონფიდენციალურობის პატივისცემა და დაცვა ჩვენი  ორგანიზაციის უმნიშვნელოვანესი პრინციპია.   ჩვენ შეიძლება გთხოვოთ თქვენს შესახებ გარკვეული პირადი საიდენტიფიკაციო ინფორმაციის (როგორიცაა თქვენი სახელი და გვარი, ტელეფონის ნომერი , ელექტრონული ფოსტის მისამართი, სქესი და დაბადების თარიღი, მისამართი ,  ასევე სხვა დამატებითი ინფორმაცია თქვენს შესახებ)   წარმოდგენა, როდესაც თქვენ ერთვებით რაიმე აქტივობაში, როგორცაა მაგალითად:  დარეგისტრირება, შეკვეთის გაფორმება , ჩვენთან ან ჩვენს პარტნიორებთან პროდუქტის შეკვეთა და ინფორმაციის გაგზავნა ან მომსახურების  შეძენა  .</p>
+                        <p class="mt-2">მომხმარებლისგან ინფორმაციის მიღება შესაძლებელია მოხდეს ტელეფონის ან ელექტრონული ფოსტის მეშვეობით ,  ჩატის ან გარე საიტის/აპლიკაციის  მეშვეობით , ვებგვერდის ან ვებჩატის მეშვეობით (იმ შემთხვევაში თუ არსებობს ის )</p>
+                        <p class="mt-2">ჩვენ შეგვიძლია გავუზიაროთ და გადავცეთ ამ ვებ-გვერდიდან ან თქვენგან  მოწოდებული ნებისმიერი ინფორმაცია შემდეგ პირებს: პარტნიორ  კომპანიებს, მათ ფილიალებს, წარმომადგენლებს  ან ნებისმიერ სხვა პიროვნებას ან იურიდიულ პირს მხოლოდ მომხმარებლის თანხმობით. ან თუ გვაქვს უფლება/იძულება/მოვალეობა/ნებართვა  ვალდებულნი ვართ გავაზიაროთ ამგვარი ინფორმაცია კანონის საფუძველზე.  ჩვენ ასევე შეგვიძლია გავავრცელოთ, გადავცეთ ან დავამუშავოთ ამგვარი ინფორმაცია მსოფლიოს ნებისმიერ ქვეყანაში ან ნებისმიერი ქვეყნის საშუალებით, შესაბამისობისა და საჭიროებების გათვალისწინებით . ასევე  თქვენი პერსონალური მონაცემები შეიძლება დამუშავდეს , როდესაც სარგებლობოთ ჩვენი კომპანიის ქოლ ცენტრით  ან ცხელი ხაზით . მომხმარებელი თუ იღებს მომსახურებას ჩვენი მხრიდან, ის ავტომატურად ეთანხმება ჩვენს კონფიდენციალურ პოლიტიკას.</p>
+                        <p class="mt-2">ჩვენ შეიძლება გავცეთ თქვენი ინფორმაცია თქვენი ან სხვების დაცვის მიზნით. ჩვენ ვიტოვებთ უფლებას, რომ გავცემთ თქვენს პირად საიდენტიფიკაციო ინფორმაციას იმ შემთხვევებში, როდესაც ამას მოითხოვს კანონმდებლობა და როდესაც ჩვენ ჩავთვლით აუცილებლად ჩვენი უფლებების დასაცავად და/ან ვებ-გვერდის მიმართ ნებისმიერი სასამართლო პროცესის, სასამართლო გადაწყვეტილების/დადგენილების ან სხვა სახის სამართლებრივი პროცესის უზრუნვლეყოფის მიზნით.</p>
+                        <p class="mt-2">ჩვენ ვიღებთ პასუხისმგებლობას სერიოზულად დავიცვათ ნებისმიერი მომხმარებლის ინფორმაციის კონფიდენციალურობა. ჩვენი თანამშრომლები პასუხს აგებენ კონფიდენციალური ინფორმაციის   დაცვაზე.  ჩვენ ვაგროვებთ, ვიყენებთ და ვინახავთ მომხმარებლის ინფორმაციას მხოლოდ სათანადო მიზნებისთვის. მომხმარებლის ინფორმაციის შეგროვება, გამოყენება და შენახვა ხდება მხოლოდ იმ მიზნით, რომ ვუზრუნველყოთ მომსახურების უმაღლესი დონე, მოვახდინოთ ბიზნესის ადმინისტრირება, ვმართოთ ჩვენი რისკები, ხელი შევუწყოთ ჩვენს სერვისებს და პროდუქტებს და დავიცვათ შესაბამისი კანონები და რეგულაციები.</p>
+                        <p class="mt-2">ჩვენ ვუზიარებთ მომხმარებლის ინფორმაციას ფილიალებსა და ბიზნეს დეპარტამენტებს, როდესაც გვჯერა, რომ ამგვარი გაზიარება განავითარებს სერვისებს, რომლებსაც მივაწოდებთ მომხმარებლებს და მხოლოდ იმ შემთხვევაში როდესაც ამგვარი გაზიარება შეესაბამება კანონს. ჩვენ შეგვიძლია მომხმარებლების შესახებ არსებული ინფორმაცია გავაზიაროთ  თუ ამგვარი გაზიარება ხელს შეუშლის თაღლითობას.</p>
+                        <p class="mt-2">პერიოდულად,  ჩვენ ვდებთ ხელშეკრულებებს სხვა კომპანიებთან რომ გაგვიწიონ მომსახურება ან მოგვაწოდონ სერვისები და პროდუქტები მომხმარებლებისთვის. ამ ხელშეკრულებების საფუძველზე, კომპანიებს შეუძლიათ მიიღონ მომხმარებლების შესახებ ინფორმაცია, მიუხედავად ამისა, პირად საიდენტიფიკაციო ინფორმაციაზე მაინც გავრცელდება წინამდებარე ინფორმაციის დაცვის პოლიტიკა.</p>
+                        <h2 class="mt-4">ვადები</h2>
+                        <p class="mt-2">პერსონალური  მონაცემები მუშავდება მხოლოდ იმ პერიოდით, რა ვადაც საჭიროა იმისთვის რომ შესრულდეს ის ოპერაცია, რისთვისაც საჭირო გახდა მონაცემის მიღება.
+                            კონკრეტული უსაფრთხოების ზომების დაცვა უზრუნველყოფილია იმ მიზნით რომ არ მოხდეს მონაცემების დაკარგვა, არასწორი ან უკანონო გამოყენება და არაუფლებამოსილი წვდომა. </p>
+                        <p class="mt-2">მონაცემების ინტერნეტით გადაცემის
+                            რა უნდა გავითვალისწინოთ მონაცემების ინტერნეტით გადაცემის დროს?
+                            ინტერნეტი ზოგადად არ არის მიჩნეული უსაფრთხო გარემოდ და ინტერნეტის საშუალებით გაგზავნილი ინფორმაცია შეიძლება მიიღონ არაუფლებამოსილმა მესამე პირებმა, რაც ხელს უწყობს ინფორმაციის გამჟღავნებას, შინაარსის ცვლილებას ან ტექნიკურ ხარვეზებს. იმ შემთხვევაშიც კი თუ ორივე გამგზავნი და მიმღები იმყოფებიან ერთსა და იმავე ქვეყანაში, ინტერნეტით გაგზავნილი ინფორმაცია შეიძლება გაგზავნილ იქნას საზღვრებს გარეთ და გადაეგზავნოს ისეთ ქვეყანას სადაც არის მონაცემების დაცვის უფრო დაბალი დონე ვიდრე თქვენს საცხოვრებელ ქვეყანაში.</p>
+                        <p class="mt-2">გთხოვთ გაითვალისწინოთ, რომ ჩვენ არ ვიღებთ პასუხისმგებლობას თქვენი ინფორმაციის უსაფრთხოებაზე როდესაც ხდება მისი გადაგზავნა ინტერნეტიდან matare.ge-მდე</p>
+                        <h2 class="mt-4">საკუთრება</h2>
+                        <p class="mt-2">ვებ-გვერდზე ასახული და მოწოდებული ნებისმიერი სახის ინფორმაცია  წარმოადგენს matare.ge-ს საკუთრებას. მისი დუბლირება, დახარისხება , რედაქტირება და ა.შ. მკაცრად აკრაძალულია.
+                            ასევე აკრძალულია ინფორმაციის უნებართვოდ,  სრულად ან ნაწილობრივ გამოყენება , გადასწორება , გავრცელება , გარეკლამება, ჩაკორექტირება ან პირადი მიზნებისთვის გამოყენება.</p>
+                        <p class="mt-2">ვებ-გვერდის გამოყენებით, თქვენ ეთანხმებით ამ კონფიცენდიალურობის შესახებ განაცხადს (შემდეგში წოდებული როგორც „განაცხადი“)
+                            თუ არ ეთანხმებით ამ განაცხადს, არ განაგრძოთ ამ ვებგვერდის გამოყენება. ეს განაცხადი შესაძლებელია განახლდეს ნებისმიერ დრო  ჩვენი შეხედულებისამებრ.
+                             გთხოვთ რეგულარულად გადაამოწმოთ წინამდებარე კონფიდენციალურობის პოლიტიკა.
+                            პატივისცემით matare.ge-ს ადმინისტრაცია</p>
+                            <div class="btns d-flex justify-content-end align-items-center mt-5">
+                                <button class="d-flex justify-content-center align-items-center rounded-3 p-2 mx-2"><img src="./direction/Download.png" alt=""><p class="m-0 px-2" style="color: #0078D4;">ჩამოტვირთვა</p></button>
+                                <button class="d-flex justify-content-center align-items-center rounded-3 p-2 mx-2"><img src="./direction/Print.png" alt=""><p class="m-0 px-2" style="color: #0078D4;">დაბეჭდვა</p></button>
+                            </div>
+                    </div>
+                    <div class="right-side d-flex flex-column align-items-center">
+                        <img class="pb-3 ps-4" src="service img/service1.png" alt="">
+                        <img class="py-3 ps-4" src="service img/service2.png" alt="">
+                        <img class="py-3 ps-4" src="service img/service3.png" alt="">
+                        <img class="py-3 ps-4" src="service img/service4.png" alt="">
+                        <img class="py-3 ps-4" src="service img/service4.png" alt="">
+                        <img class="py-3 ps-4" src="service img/service4.png" alt="">
+                        <img class="py-3 ps-4" src="service img/service4.png" alt="">
+                    </div>
+                </div>
+            
+
+                <!----------------------AD--------------------->
+                <div class="ad justify-content-center align-items-center mt-5">
+                    <img class="" src="./TUREBI/AD2.png" alt="">
+                </div>
+
+
+
+                <!---------------------footer------------------>
+
+    <hr class="mt-5">
+    <div class="footer justify-content-center align-items-center mt-5 p-2 flex-column">
+        <div class="top-footer d-flex">
+            <div class="matare-link d-flex flex-column m-2 px-3">
+                <h2>MATARE.GE</h2>
+                <a href="#">ჩვენს შესახებ</a>
+                <a href="#">ავიაბილეთები</a>
+                <a href="#">სერვისები</a>
+                <a href="#">კომფიდენციალურობის პოლიტიკა</a>
+                <a href="#">ხშირად დასმული  კითხვები</a>
+            </div>
+            <div class="sasargeblo-link d-flex flex-column m-2 px-3">
+                <h2>სასარგებლო</h2>
+                <a href="#">დაზღვევა</a>
+                <a href="#">სასტუმროები</a>
+                <a href="#">კომპენსაცია</a>
+                <a href="#">კარიერა</a>
+                <a href="#">ბლოგი</a>
+            </div>
+            <div class="airport-link d-flex flex-column m-2 px-3">
+                <h2>აეროპორტები</h2>
+                <a href="#">ავიაბილეთები თბილისიდან</a>
+                <a href="#">ავიაბილეთები ქუთაისიდან</a>
+                <a href="#">ავიაბილეთები ბათუმიდან</a>
+                <a href="#">ავიაბილეთები ტრაბზონიდან</a>
+                <a href="#">ავიაბილეთები ერევნიდან</a>
+            </div>
+            <div class="contact-link d-flex flex-column m-2 px-3">
+                <h2>კონტაქტი</h2>
+                <a href="#"><img src="./footer-contact-img/f-text.png" alt="">მოგვწერეთ</a>
+                <a href="#"> <img src="./footer-contact-img/f-phone.png" alt="">+995 322 12 14 18</a>
+                <a href="#"> <img src="./footer-contact-img/f-phone.png" alt="">+995 558 12 14 18</a>
+                <a href="#"><img src="./footer-contact-img/f-mail.png" alt="">MATARETRAVEL@GMAIL.COM</a>
+            </div>
+        </div>
+        <div class="bottom-footer d-flex flex-column">
+            <div class="f-socmedia d-flex justify-content-center align-items-center">
+                <div class="mf d-flex justify-content-center align-items-center">
+                    <img class="p-3" src="./footer-contact-img/facebook.png" alt="">
+                    <img class="p-3" src="./footer-contact-img/whatsapp.png" alt="">
+                    <img class="p-3" src="./footer-contact-img/gmail.png" alt="">
+                    <img class="p-3" src="./footer-contact-img/appstore.png" alt="">
+                    <img class="p-3" src="./footer-contact-img/googleplay.png" alt="">
+                </div>
+                <div class="f-map d-flex justify-content-center align-items-center">
+                    <img style="width: 100%;" src="./footer-contact-img/map.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy justify-content-center align-items-center mt-5">
+        <p>Copyright 2024. BY MATARE.GE</p>
+    </div>
+    
+            
+            </div>
+    </div>
+    
+
+
+
+
+    <!--------------------M O B I L E ----------------->
+
+
+    <div class="mob-privacy mt-4">
+        <div class="privacy p-3">
+            <h1 class="text-center">კონფიდენციალურობის პოლიტიკა</h1>
+                        <h3 class="mt-4">განაცხადი კონფიდენციალურობის შესახებ</h3>
+                        <p class="mt-3">MATARE.GE  (შემდეგში წოდებული როგორც  “ჩვენ”) მოხარულია/მოხარული ვართ რომ ეწვიეთ ამ ვებ-გვერდს და გამოხატეთ ინტერესი ჩვენი სერვისებისა თუ პროდუქტების მიმართ.  ჩვენ  არ წარმოვადგენთ რომელიმე ავიაკომპანიის საკუთრებას ან შვილობილ კომპანიას და   რეისის გაუქმების, გადადების  ან ბარგის დაკარგვის შემთხვევაში , ჩვენ არ ვიღებთ პასუხისმგებლობას</p>
+                        <h2 class="mt-4">ჩვენი კონფიდენციალურობის პრინციპები </h2>
+                        <p class="mt-2">თითოეული მომხმარებლის კონფიდენციალურობის პატივისცემა და დაცვა ჩვენი  ორგანიზაციის უმნიშვნელოვანესი პრინციპია.   ჩვენ შეიძლება გთხოვოთ თქვენს შესახებ გარკვეული პირადი საიდენტიფიკაციო ინფორმაციის (როგორიცაა თქვენი სახელი და გვარი, ტელეფონის ნომერი , ელექტრონული ფოსტის მისამართი, სქესი და დაბადების თარიღი, მისამართი ,  ასევე სხვა დამატებითი ინფორმაცია თქვენს შესახებ)   წარმოდგენა, როდესაც თქვენ ერთვებით რაიმე აქტივობაში, როგორცაა მაგალითად:  დარეგისტრირება, შეკვეთის გაფორმება , ჩვენთან ან ჩვენს პარტნიორებთან პროდუქტის შეკვეთა და ინფორმაციის გაგზავნა ან მომსახურების  შეძენა  .</p>
+                        <p class="mt-2">მომხმარებლისგან ინფორმაციის მიღება შესაძლებელია მოხდეს ტელეფონის ან ელექტრონული ფოსტის მეშვეობით ,  ჩატის ან გარე საიტის/აპლიკაციის  მეშვეობით , ვებგვერდის ან ვებჩატის მეშვეობით (იმ შემთხვევაში თუ არსებობს ის )</p>
+                        <p class="mt-2">ჩვენ შეგვიძლია გავუზიაროთ და გადავცეთ ამ ვებ-გვერდიდან ან თქვენგან  მოწოდებული ნებისმიერი ინფორმაცია შემდეგ პირებს: პარტნიორ  კომპანიებს, მათ ფილიალებს, წარმომადგენლებს  ან ნებისმიერ სხვა პიროვნებას ან იურიდიულ პირს მხოლოდ მომხმარებლის თანხმობით. ან თუ გვაქვს უფლება/იძულება/მოვალეობა/ნებართვა  ვალდებულნი ვართ გავაზიაროთ ამგვარი ინფორმაცია კანონის საფუძველზე.  ჩვენ ასევე შეგვიძლია გავავრცელოთ, გადავცეთ ან დავამუშავოთ ამგვარი ინფორმაცია მსოფლიოს ნებისმიერ ქვეყანაში ან ნებისმიერი ქვეყნის საშუალებით, შესაბამისობისა და საჭიროებების გათვალისწინებით . ასევე  თქვენი პერსონალური მონაცემები შეიძლება დამუშავდეს , როდესაც სარგებლობოთ ჩვენი კომპანიის ქოლ ცენტრით  ან ცხელი ხაზით . მომხმარებელი თუ იღებს მომსახურებას ჩვენი მხრიდან, ის ავტომატურად ეთანხმება ჩვენს კონფიდენციალურ პოლიტიკას.</p>
+                        <p class="mt-2">ჩვენ შეიძლება გავცეთ თქვენი ინფორმაცია თქვენი ან სხვების დაცვის მიზნით. ჩვენ ვიტოვებთ უფლებას, რომ გავცემთ თქვენს პირად საიდენტიფიკაციო ინფორმაციას იმ შემთხვევებში, როდესაც ამას მოითხოვს კანონმდებლობა და როდესაც ჩვენ ჩავთვლით აუცილებლად ჩვენი უფლებების დასაცავად და/ან ვებ-გვერდის მიმართ ნებისმიერი სასამართლო პროცესის, სასამართლო გადაწყვეტილების/დადგენილების ან სხვა სახის სამართლებრივი პროცესის უზრუნვლეყოფის მიზნით.</p>
+                        <p class="mt-2">ჩვენ ვიღებთ პასუხისმგებლობას სერიოზულად დავიცვათ ნებისმიერი მომხმარებლის ინფორმაციის კონფიდენციალურობა. ჩვენი თანამშრომლები პასუხს აგებენ კონფიდენციალური ინფორმაციის   დაცვაზე.  ჩვენ ვაგროვებთ, ვიყენებთ და ვინახავთ მომხმარებლის ინფორმაციას მხოლოდ სათანადო მიზნებისთვის. მომხმარებლის ინფორმაციის შეგროვება, გამოყენება და შენახვა ხდება მხოლოდ იმ მიზნით, რომ ვუზრუნველყოთ მომსახურების უმაღლესი დონე, მოვახდინოთ ბიზნესის ადმინისტრირება, ვმართოთ ჩვენი რისკები, ხელი შევუწყოთ ჩვენს სერვისებს და პროდუქტებს და დავიცვათ შესაბამისი კანონები და რეგულაციები.</p>
+                        <p class="mt-2">ჩვენ ვუზიარებთ მომხმარებლის ინფორმაციას ფილიალებსა და ბიზნეს დეპარტამენტებს, როდესაც გვჯერა, რომ ამგვარი გაზიარება განავითარებს სერვისებს, რომლებსაც მივაწოდებთ მომხმარებლებს და მხოლოდ იმ შემთხვევაში როდესაც ამგვარი გაზიარება შეესაბამება კანონს. ჩვენ შეგვიძლია მომხმარებლების შესახებ არსებული ინფორმაცია გავაზიაროთ  თუ ამგვარი გაზიარება ხელს შეუშლის თაღლითობას.</p>
+                        <p class="mt-2">პერიოდულად,  ჩვენ ვდებთ ხელშეკრულებებს სხვა კომპანიებთან რომ გაგვიწიონ მომსახურება ან მოგვაწოდონ სერვისები და პროდუქტები მომხმარებლებისთვის. ამ ხელშეკრულებების საფუძველზე, კომპანიებს შეუძლიათ მიიღონ მომხმარებლების შესახებ ინფორმაცია, მიუხედავად ამისა, პირად საიდენტიფიკაციო ინფორმაციაზე მაინც გავრცელდება წინამდებარე ინფორმაციის დაცვის პოლიტიკა.</p>
+                        <h2 class="mt-4">ვადები</h2>
+                        <p class="mt-2">პერსონალური  მონაცემები მუშავდება მხოლოდ იმ პერიოდით, რა ვადაც საჭიროა იმისთვის რომ შესრულდეს ის ოპერაცია, რისთვისაც საჭირო გახდა მონაცემის მიღება.
+                            კონკრეტული უსაფრთხოების ზომების დაცვა უზრუნველყოფილია იმ მიზნით რომ არ მოხდეს მონაცემების დაკარგვა, არასწორი ან უკანონო გამოყენება და არაუფლებამოსილი წვდომა. </p>
+                        <p class="mt-2">მონაცემების ინტერნეტით გადაცემის
+                            რა უნდა გავითვალისწინოთ მონაცემების ინტერნეტით გადაცემის დროს?
+                            ინტერნეტი ზოგადად არ არის მიჩნეული უსაფრთხო გარემოდ და ინტერნეტის საშუალებით გაგზავნილი ინფორმაცია შეიძლება მიიღონ არაუფლებამოსილმა მესამე პირებმა, რაც ხელს უწყობს ინფორმაციის გამჟღავნებას, შინაარსის ცვლილებას ან ტექნიკურ ხარვეზებს. იმ შემთხვევაშიც კი თუ ორივე გამგზავნი და მიმღები იმყოფებიან ერთსა და იმავე ქვეყანაში, ინტერნეტით გაგზავნილი ინფორმაცია შეიძლება გაგზავნილ იქნას საზღვრებს გარეთ და გადაეგზავნოს ისეთ ქვეყანას სადაც არის მონაცემების დაცვის უფრო დაბალი დონე ვიდრე თქვენს საცხოვრებელ ქვეყანაში.</p>
+                        <p class="mt-2">გთხოვთ გაითვალისწინოთ, რომ ჩვენ არ ვიღებთ პასუხისმგებლობას თქვენი ინფორმაციის უსაფრთხოებაზე როდესაც ხდება მისი გადაგზავნა ინტერნეტიდან matare.ge-მდე</p>
+                        <h2 class="mt-4">საკუთრება</h2>
+                        <p class="mt-2">ვებ-გვერდზე ასახული და მოწოდებული ნებისმიერი სახის ინფორმაცია  წარმოადგენს matare.ge-ს საკუთრებას. მისი დუბლირება, დახარისხება , რედაქტირება და ა.შ. მკაცრად აკრაძალულია.
+                            ასევე აკრძალულია ინფორმაციის უნებართვოდ,  სრულად ან ნაწილობრივ გამოყენება , გადასწორება , გავრცელება , გარეკლამება, ჩაკორექტირება ან პირადი მიზნებისთვის გამოყენება.</p>
+                        <p class="mt-2">ვებ-გვერდის გამოყენებით, თქვენ ეთანხმებით ამ კონფიცენდიალურობის შესახებ განაცხადს (შემდეგში წოდებული როგორც „განაცხადი“)
+                            თუ არ ეთანხმებით ამ განაცხადს, არ განაგრძოთ ამ ვებგვერდის გამოყენება. ეს განაცხადი შესაძლებელია განახლდეს ნებისმიერ დრო  ჩვენი შეხედულებისამებრ.
+                             გთხოვთ რეგულარულად გადაამოწმოთ წინამდებარე კონფიდენციალურობის პოლიტიკა.
+                            პატივისცემით matare.ge-ს ადმინისტრაცია</p>
+        </div>
+    </div>
+
+
+
+     <!---------------footer mobile----------------->
+
+     <div class="footer-mob flex-column mt-5">
+        <div class="footermob-bck d-flex flex-column mt-4 p-3">
+            <a class="py-2" href="#">ჩვენს შესახებ</a>
+            <a class="py-2" href="#">ავიაბილეთები</a>
+            <a class="py-2" href="#">სერვისები</a>
+            <a class="py-2" href="#">კომფიდენციალურობის პოლიტიკა</a>
+            <a class="py-2" href="#">ხშირად დასმული  კითხვები</a>
+            <a class="py-2" href="#">დაზღვევა</a>
+            <a class="py-2" href="#">სასტუმროები</a>
+            <a class="py-2" href="#">კომპენსაცია</a>
+            <a class="py-2" href="#">კარიერა</a>
+            <a class="py-2" href="#">ბლოგი</a>
+            <a class="py-2" href="#">ავიაბილეთები თბილისიდან</a>
+            <a class="py-2" href="#">ავიაბილეთები ქუთაისიდან</a>
+            <a class="py-2" href="#">ავიაბილეთები ბათუმიდან</a>
+            <a class="py-2" href="#">ავიაბილეთები ტრაბზონიდან</a>
+            <a class="py-2" href="#">ავიაბილეთები ერევნიდან</a>
+        </div>
+        <div class="map-foter d-flex justify-content-center align-items-center mt-5">
+            <img style="width: 300px;" src="./footer mobile/map.png" alt="">
+        </div>
+        <div class="contact-mobile d-flex flex-column justify-content-center align-items-center mt-4">
+            <h2>კონტაქტი</h2>
+            <div class="contact-links d-flex flex-column justify-content-center align-items-start mt-4">
+                <a class="mt-2 p-2 rounded-3" href="#"><img src="./footer-contact-img/f-text.png" alt="">მოგვწერეთ</a>
+                <a class="mt-2 p-2 rounded-3" href="#"> <img src="./footer-contact-img/f-phone.png" alt="">+995 322 12 14 18</a>
+                <a class="mt-2 p-2 rounded-3" href="#"> <img src="./footer-contact-img/f-phone.png" alt="">+995 558 12 14 18</a>
+                <a class="mt-2 p-2 rounded-3" href="#"><img src="./footer-contact-img/f-mail.png" alt="">MATARETRAVEL@GMAIL.COM</a>
+            </div>
+        </div>
+        <div class="social-mediamb d-flex justify-content-center align-items-center">
+            <img class="p-2" src="./footer mobile/facebook.png" alt="">
+            <img class="p-2" src="./footer mobile/whatsapp.png" alt="">
+            <img class="p-2" src="./footer mobile/gmail.png" alt="">
+            <img class="p-2" src="./footer mobile/appstore.png" alt="">
+            <img class="p-2" src="./footer mobile/googleplay.png" alt="">
+        </div>
+        <div class="copy d-flex justify-content-center align-items-center ">
+            <p>Copyright 2024. BY MATARE.GE</p>
+        </div>
+    </div>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            function showSidebar() {
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex'
+            }
+            function hideSidebar() {
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+            }
+        </script>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
