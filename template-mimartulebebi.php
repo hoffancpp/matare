@@ -8,7 +8,7 @@
       $featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' ); 
   ?>
         <!--------------search for desktop--------------->
-        <p class="dissapear ms-4">მთავარი  > ავიაბილეთები საქართველოდან</p>
+        <p class="dissapear ms-4">მთავარი  > <?php echo the_title() ?></p>
         <div class="des-all-search justify-content-center align-items-center mt-5 flex-column">
             <?php if($featured_image): ?>
                 <div class="desktop-versionfromgeo d-flex flex-column p-5 rounded-5 flex-lg-row justify-content-center" style="background-image: url('<?php echo $featured_image[0]; ?>')">

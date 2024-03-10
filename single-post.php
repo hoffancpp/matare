@@ -6,7 +6,7 @@
   ?>
           <!---------------blog main----------------->
 
-        <p class="ms-4">მთავარი > ბლოგი > ლორემ იპსუმ</p>
+        <p class="ms-4">მთავარი > ბლოგი > <?php echo the_title() ?></p>
         <div class="main-blogsh justify-content-between align-items-start mt-4">
             <div class="left-bs d-flex justify-content-start align-items-start ps-5 flex-column">
                 <?php if($featured_image): ?>
