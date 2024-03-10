@@ -1,5 +1,32 @@
 <?php /* Template Name: Contact */ ?>
 
+<?php 
+    if( isset($_POST['name']) ) {
+
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $message = $_POST['message'];
+
+        //php mailer variables
+        // $to = get_option('admin_email');
+        $to = 'hoffann17@gmail.com';
+        $subject = "Message from Contact";
+        $headers = 'From: '. $email . "\r\n" .
+
+        //Here put your Validation and send mail
+        $sent = wp_mail($to, $subject, strip_tags($message), $headers);
+            
+        if($sent) {
+          //message sent!       
+        }
+        else  {
+          //message wasn't sent       
+        }
+        
+    }
+?>
+
 <?php include "header.php" ?>
 
         <!-----------------------------contact main----------------------->
@@ -77,26 +104,26 @@
                             <?php endif; ?> 
                         </div>
                     </div>
-                    <div class="right-contact justify-content-center align-items-center ms-5">
+                    <form class="right-contact justify-content-center align-items-center ms-5" style="width: auto; background-color: transparent;">
                         <div class="c-in d-flex flex-column">
                             <label for="fname">სახელი</label>
-                            <input class="rounded-4" type="text" placeholder="გთხოვთ ჩაწეროთ სახელი">
+                            <input class="rounded-4" name="name" type="text" placeholder="გთხოვთ ჩაწეროთ სახელი">
                         </div>
                         <div class="c-in d-flex flex-column mt-3">
-                            <label for="fname">ელექტრონული ფოსტა</label>
-                            <input class="rounded-4" type="text" placeholder="გთხოვთ ჩაწეროთ თქვენი ელექტრონული ფოსტა">
+                            <label for="email">ელექტრონული ფოსტა</label>
+                            <input class="rounded-4" name="email" type="email" placeholder="გთხოვთ ჩაწეროთ თქვენი ელექტრონული ფოსტა">
                         </div>
                         <div class="c-in d-flex flex-column mt-3">
-                            <label for="fname">ტელეფონის ნომერი</label>
-                            <input class="rounded-4" type="text" placeholder="გთხოვთ ჩაწეროთ თქვენი საკონტაქტო ნომერი">
+                            <label for="phone">ტელეფონის ნომერი</label>
+                            <input class="rounded-4" name="phone" type="text" placeholder="გთხოვთ ჩაწეროთ თქვენი საკონტაქტო ნომერი">
                         </div>
                         <div class="c-in d-flex flex-column mt-3">
-                            <label for="fname">შეტყობინება</label>
-                            <input class="rounded-4" class="sent" style="height: 200px;" type="text" placeholder="გთხოვთ ჩაწეროთ ტექსტი">
+                            <label for="message">შეტყობინება</label>
+                            <input class="rounded-4" name="message" class="sent" style="height: 200px;" type="text" placeholder="გთხოვთ ჩაწეროთ ტექსტი">
                         </div>
                         <button class="d-flex rounded-4 p-2 px-3 mt-4">გაგზავნა</button>
                         <img class="mt-4" src="<?php echo get_template_directory_uri(); ?>/footer-contact-img/map.png" alt="">
-                    </div>
+                    </form>
                 </div>
                 <div class="last-btn d-flex flex-row mt-5">
                     <button class="d-flex justify-content-center align-items-center mx-2 p-2 rounded-4"><a class="text-decoration-none text-white" href="<?php echo $messenger_link; ?>"><h2 class="m-0">MESSENGER</h2></a></button>

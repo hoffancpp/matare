@@ -26,7 +26,7 @@
                     <h4 class="mt-3" style="width: 300px;"><?php echo $blogpost -> post_title; ?></h4>
                     <div class="paragraph d-flex justify-content-between align-items-center">
                         <a class="p-2 rounded-4" href="<?php echo get_permalink($blogpost -> ID); ?>">გაიგე მეტი</a>
-                        <p class="p-2 m-0"><?php echo get_the_date('F j, Y', $blogpost -> ID); ?></p>
+                        <p class="p-2 m-0"><?php echo get_the_date('F j, Y', $blogpost -> ID);  ?> წელი</p>
                     </div>
                 </div>
             </div>
