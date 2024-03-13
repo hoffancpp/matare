@@ -1,5 +1,19 @@
 <?php
 
+add_filter( 'acf/settings/save_json', function( $path ) {
+    return get_stylesheet_directory() . '/acf_json';
+} );
+
+add_filter( 'acf/settings/load_json', function( $paths ) {
+    // Remove the original path (optional).
+    unset($paths[0]);
+
+    // Append the new path and return it.
+    $paths[] = get_stylesheet_directory() . '/acf_json';
+
+    return $paths;    
+} );
+
 acf_add_options_page( array(
     'page_title' => __('Page Options'),
     'menu_title' => __('Page Options'),
