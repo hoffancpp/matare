@@ -374,59 +374,46 @@ $information_box_mobile = get_field('information_box_mobile', get_the_ID());
 </div>
 <?php endif; ?>
 <!------------------blog------------------->
-
+<?php $homepageBlog = get_field('blog') ? get_field('blog') : []; ?>
+<?php if( $homepageBlog ): ?>
 <div class="blog flex-column justify-content-center align-items-center px-xl-3 mt-5">
     <h1>ბლოგი</h1>
-    <p class="text-center mt-3" style="width: 500px;">Lorem ipsum dolor sit amet consectetur. Accumsan vitae tincidunt
-        ultrices adipiscing in sed vitae et ac. Duis congue sit quam egestas sagittis blandit neque facilisi. Turpis
-        ligula ultricies ante dictum </p>
+    <p class="text-center mt-3" style="width: 500px;"><?php echo $homepageBlog['blog_text']; ?></p>
     <div class="all-blog d-flex justify-content-center mt-5">
         <div class="left-blog d-flex flex-column">
-            <img style="width: 400px;" src="<?php echo get_template_directory_uri(); ?>/blog/lg-rectangle.png" alt="">
-            <div class="blog-text">
-                <div class="text-date d-flex justify-content-between">
-                    <h2 style="width: 300px;">Lorem ipsum dolor sit amet consectetur. Accumsan</h2>
-                    <p>JUN 5 2006</p>
+            <a class="text-decoration-none" href="<?php echo get_permalink($homepageBlog['blog_posts'][0] -> ID); ?>" style="color:#212529">
+                <img style="width: 400px; object-fit: cover;" src="<?php echo get_the_post_thumbnail_url($homepageBlog['blog_posts'][0]); ?>" alt="">
+                <div class="blog-text">
+                    <div class="text-date d-flex justify-content-between">
+                        <h2 style="width: 300px;"><?php echo $homepageBlog['blog_posts'][0]->post_title; ?></h2>
+                        <p><?php echo get_the_date('F j, Y', $homepageBlog['blog_posts'][0] -> ID); ?></p>
+                    </div>
+                    <p><?php echo substr(wp_strip_all_tags($homepageBlog['blog_posts'][0]->post_content),0,200); ?>...</p>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur. Accumsan vitae tincidunt ultrices adipiscing in sed vitae et
-                    ac. Duis congue sit</p>
-            </div>
+            </a>
         </div>
-        <div class="rb-blog ms-5 d-flex flex-column ">
-            <div class="right-blog d-flex">
-                <div class="rb-text">
-                    <h3 style="width: 300px !important;">Lorem ipsum dolor sit amet consectetur</h3>
-                    <p class="pe-2" style="width: 400px !important;">Lorem ipsum dolor sit amet consectetur. Accumsan
-                        vitae tincidunt </p>
-                    <p>JUN 5 2006</p>
-                </div>
-                <img style="width: 200px; height: 150px;"
-                    src="<?php echo get_template_directory_uri(); ?>/blog/sm-rectangle.png" alt="">
+        <?php if(count($homepageBlog['blog_posts']) > 1): ?>
+            <div class="rb-blog ms-5 d-flex flex-column ">
+                <?php foreach($homepageBlog['blog_posts'] as $key => $blogpost): ?>
+                    <?php if($key > 0): ?>
+                        <a class="text-decoration-none <?php if($key != 1) echo 'mt-3'; ?>" href="<?php echo get_permalink($blogpost -> ID); ?>" style="color:#212529">
+                            <div class="right-blog d-flex">
+                                <div class="rb-text">
+                                    <h3 style="width: 300px !important;"><?php echo $blogpost->post_title; ?></h3>
+                                    <p class="pe-2" style="width: 400px;"><?php echo substr(wp_strip_all_tags($blogpost->post_content),0,200); ?>...</p>
+                                    <p><?php echo get_the_date('F j, Y', $blogpost -> ID); ?></p>
+                                </div>
+                                <img style="width: 200px; height: 150px; object-fit: cover;"
+                                    src="<?php echo get_the_post_thumbnail_url($blogpost); ?>" alt="">
+                            </div>
+                        </a>
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </div>
-            <div class="right-blog d-flex mt-2">
-                <div class="rb-text">
-                    <h3 style="width: 300px !important;">Lorem ipsum dolor sit amet consectetur</h3>
-                    <p class="pe-2" style="width: 400px !important;">Lorem ipsum dolor sit amet consectetur. Accumsan
-                        vitae tincidunt </p>
-                    <p>JUN 5 2006</p>
-                </div>
-                <img style="width: 200px; height: 150px;"
-                    src="<?php echo get_template_directory_uri(); ?>/blog/sm-rectangle.png" alt="">
-            </div>
-            <div class="right-blog d-flex mt-2">
-                <div class="rb-text">
-                    <h3 style="width: 300px !important;">Lorem ipsum dolor sit amet consectetur</h3>
-                    <p class="pe-2" style="width: 400px !important;">Lorem ipsum dolor sit amet consectetur. Accumsan
-                        vitae tincidunt </p>
-                    <p>JUN 5 2006</p>
-                </div>
-                <img style="width: 200px; height: 150px;"
-                    src="<?php echo get_template_directory_uri(); ?>/blog/sm-rectangle.png" alt="">
-            </div>
-        </div>
+        <?php endif; ?>
     </div>
 </div>
-
+<?php endif; ?>
 
 <?php $three_box_block = get_field('three_box_block', get_the_ID()); ?>
 <!--------------three card-->
