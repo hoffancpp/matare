@@ -355,14 +355,18 @@ $information_box_mobile = get_field('information_box_mobile', get_the_ID());
         <div class="service-row1 d-flex">
             <?php foreach ($services_block['services'] as $key => $images): ?>
             <?php if ($key < 3): ?>
-            <img class="p-2" src="<?php echo $images['image']['sizes']['large']; ?>" alt="">
+                <a href="<?php echo $images['link']; ?>">
+                    <img class="p-2" src="<?php echo $images['image']['sizes']['large']; ?>" alt="">
+                </a>
             <?php endif; ?>
             <?php endforeach; ?>
         </div>
         <div class="service-row2 d-flex">
             <?php foreach ($services_block['services'] as $key => $images): ?>
             <?php if ($key > 2): ?>
-            <img class="p-2" src="<?php echo $images['image']['sizes']['large']; ?>" alt="">
+                <a href="<?php echo $images['link']; ?>">
+                    <img class="p-2" src="<?php echo $images['image']['sizes']['large']; ?>" alt="">
+                </a>
             <?php endif; ?>
             <?php endforeach; ?>
         </div>
