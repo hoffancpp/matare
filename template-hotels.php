@@ -1,3 +1,5 @@
+<?php /* Template Name: Hotels */ ?>
+
 <?php include "header.php"; ?>
 
 <?php 
@@ -88,7 +90,7 @@
                 <?php echo get_field('bottom_content', get_the_ID()); ?>
             </div>
             <?php $sidebar_banners = get_field('sidebar_right', get_the_ID()); ?>
-            <?php if($sidebar_banners['content']): ?>
+            <?php if($sidebar_banners && $sidebar_banners['content']): ?>
                 <div class="right-cont d-flex flex-column">
                     <?php foreach( $sidebar_banners['content'] as $banner ): ?>
                         <a href="<?php echo $banner['link']; ?>"><img class="pb-3 ps-4" src="<?php echo $banner['image']['sizes']['large']; ?>" alt=""></a>
