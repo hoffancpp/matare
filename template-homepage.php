@@ -48,14 +48,14 @@
                         <input style="width: 350px !important;" type="text" class="form-control"
                             id="formGroupExampleInput" placeholder="გთხოვთ აირჩიოთ ქალაქი" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">თბილისი</a></li>
-                            <li><a class="dropdown-item" href="#">ქუთაისი</a></li>
-                            <li><a class="dropdown-item" href="#">ბათუმი</a></li>
-                            <li><a class="dropdown-item" href="#">ბარსელონა</a></li>
-                            <li><a class="dropdown-item" href="#">აბუდაბი</a></li>
-                            <li><a class="dropdown-item" href="#">ვენა</a></li>
-                        </ul>
+                        <?php $mimartuleba = get_field('mimartuleba', 'options') ? get_field('mimartuleba', 'options') : []; ?>
+                        <?php if($mimartuleba): ?>
+                            <ul class="dropdown-menu">
+                                <?php foreach($mimartuleba as $cities): ?>
+                                    <li><a class="dropdown-item" href="#"><?php echo $cities['city']; ?></a></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="input-des">
@@ -67,14 +67,14 @@
                         <input style="width: 350px !important;" type="text" class="form-control"
                             id="formGroupExampleInput" placeholder="გთხოვთ აირჩიოთ ქალაქი" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">თბილისი</a></li>
-                            <li><a class="dropdown-item" href="#">ქუთაისი</a></li>
-                            <li><a class="dropdown-item" href="#">ბათუმი</a></li>
-                            <li><a class="dropdown-item" href="#">ბარსელონა</a></li>
-                            <li><a class="dropdown-item" href="#">აბუდაბი</a></li>
-                            <li><a class="dropdown-item" href="#">ვენა</a></li>
-                        </ul>
+                        <?php $danishnuleba = get_field('danishnuleba', 'options') ? get_field('danishnuleba', 'options') : []; ?>
+                        <?php if($danishnuleba): ?>
+                            <ul class="dropdown-menu">
+                                <?php foreach($danishnuleba as $cities): ?>
+                                    <li><a class="dropdown-item" href="#"><?php echo $cities['city']; ?></a></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
                     </div>
                 </div>
 
