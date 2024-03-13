@@ -430,6 +430,25 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_65f1aa27e0cbc",
+            "label": "Google Maps iframe",
+            "name": "google_maps_iframe",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -449,5 +468,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1710336416
+    "modified": 1710336571
 }

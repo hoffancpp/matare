@@ -45,8 +45,8 @@
                     <a href="<?php echo get_field('app_store', 'options'); ?>"><img class="p-3" src="<?php echo get_template_directory_uri();?>/footer-contact-img/appstore.png" alt=""></a>
                     <a href="<?php echo get_field('play_store', 'options'); ?>"><img class="p-3" src="<?php echo get_template_directory_uri();?>/footer-contact-img/googleplay.png" alt=""></a>
                 </div>
-                <div class="f-map d-flex justify-content-center align-items-center">
-                    <img style="width: 100%;" src="<?php echo get_template_directory_uri();?>/footer-contact-img/map.png" alt="">
+                <div class="f-map d-flex justify-content-center align-items-center" style="border-radius: 20px;overflow:hidden;">
+                    <?php echo get_field('google_maps_iframe','options'); ?>
                 </div>
             </div>
         </div>
