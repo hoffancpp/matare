@@ -326,17 +326,11 @@ $information_box_mobile = get_field('information_box_mobile', get_the_ID());
             <div class="carousel-inner">
                 <?php foreach ($carousel as $key => $image): ?>
                     <div class="carousel-item <?php echo $key == 0 ? 'active' : ''; ?>">
-                        <img src="<?php echo $image['image']['sizes']['large']; ?>" class="d-block w-100" alt="...">
+                        <a href="<?php echo $image['link']; ?>">
+                            <img src="<?php echo $image['image']['sizes']['large']; ?>" class="d-block w-100" alt="...">
+                        </a>
                     </div>
                 <?php endforeach; ?>
-                <div class="carousel-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/city-photos/carousel-img2.png"
-                        class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/city-photos/carousel-img3.png"
-                        class="d-block w-100" alt="...">
-                </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
