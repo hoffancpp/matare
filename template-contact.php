@@ -122,7 +122,9 @@
                             <input class="rounded-4" name="message" class="sent" style="height: 200px;" type="text" placeholder="გთხოვთ ჩაწეროთ ტექსტი">
                         </div>
                         <button class="d-flex rounded-4 p-2 px-3 mt-4">გაგზავნა</button>
-                        <img class="mt-4" src="<?php echo get_template_directory_uri(); ?>/footer-contact-img/map.png" alt="">
+                        <div class="mt-4" style="border-radius:20px;overflow:hidden;">
+                            <?php echo get_field('google_maps_iframe','options'); ?>
+                        </div>
                     </form>
                 </div>
                 <div class="last-btn d-flex flex-row mt-5">
