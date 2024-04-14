@@ -1,6 +1,6 @@
-<?php /* Template Name: Homepage */ ?>
+<?php /* Template Name: Homepage */ 
 
-<?php include "header.php" ?>
+get_header(); ?>
 
 <!---------------search for mobile----------------->
 
@@ -40,7 +40,7 @@
 
             <form class="search-container p-3 px-4 rounded-4" action="/tours/" style="background-color: white;">
                 <div class="input-des">
-                    <label for="formGroupExampleInput" class="form-label">მიმართულება</label>
+                    <label for="formGroupExampleInput" class="form-label">აირჩიეთ სასურველი მიმართულება</label>
                     <div class="input-icons d-flex justify-content-start align-items-center mb-3">
                         <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img
                                 src="<?php echo get_template_directory_uri(); ?>/input_desktop_elements/takeoff2.png"
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="input-des">
-                    <label for="formGroupExampleInput" class="form-label">დანიშნულება</label>
+                    <label for="formGroupExampleInput" class="form-label">აირჩიეთ სასურველი ქალაქი</label>
                     <div class="input-icons d-flex justify-content-start align-items-center mb-3">
                         <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img
                                 src="<?php echo get_template_directory_uri(); ?>/input_desktop_elements/takeoffrotate.png"
@@ -80,7 +80,7 @@
 
 
                 <div class="input-des">
-                    <label for="formGroupExampleInput" class="form-label">გამგზავრება</label>
+                    <label for="formGroupExampleInput" class="form-label">აირჩიეთ გამგზავრების თარიღი</label>
                     <div class="input-icons d-flex justify-content-start align-items-center mb-3">
                         <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img
                                 src="<?php echo get_template_directory_uri(); ?>/input_elements/calendar.png"
@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <div class="input-des">
-                    <label for="formGroupExampleInput" class="form-label">დაბრუნება</label>
+                    <label for="formGroupExampleInput" class="form-label">აირჩიეთ დაბრუნების თარიღი</label>
                     <div class="input-icons d-flex justify-content-start align-items-center mb-3">
                         <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img
                                 src="<?php echo get_template_directory_uri(); ?>/input_elements/calendar.png"
@@ -102,7 +102,7 @@
 
 
                 <div class="input-des">
-                    <label for="formGroupExampleInput" class="form-label">მგზავრები</label>
+                    <label for="formGroupExampleInput" class="form-label">მგზავრების რაოდენობა</label>
                     <div class="input-icons d-flex justify-content-start align-items-center mb-3">
                         <i style="margin-left: 290px !important;" class="ms-5 position-absolute d-flex"><img
                                 src="<?php echo get_template_directory_uri(); ?>/input_elements/user.png" alt=""></i>
@@ -110,7 +110,7 @@
                             id="formGroupExampleInput" placeholder="მგზავრი">
                     </div>
                     <div class="search-btn-des d-flex justify-content-end align-items-center">
-                        <button class="search-des p-3 rounded-4">ძიება <img class="ms-2"
+                        <button class="search-des p-3 rounded-4">მოძებნეთ მარტივად <img class="ms-2"
                                 src="<?php echo get_template_directory_uri(); ?>/input_desktop_elements/search-des.png"
                                 alt=""></button>
                     </div>
@@ -170,7 +170,7 @@ $information_box_mobile = get_field('information_box_mobile', get_the_ID());
     <div class="cards-section justify-content-center align-tems-center">
         <div class="cards-back flex-column justify-content-center align-items-center text-center mt-5 rounded-4 py-3">
             <span>რატომ</span>
-            <h1>MATARE.GE?</h1>
+            <h1> უნდა აირჩიოთ ტურისტული სააგენტო MATARE.GE?</h1>
             <div class="card-row1 d-flex justify-content-center align-items-center">
                 <?php foreach ($information_box_mobile['content'] as $key => $box_mobile): ?>
                     <?php if ($key < 3): ?>
@@ -458,4 +458,4 @@ $information_box_mobile = get_field('information_box_mobile', get_the_ID());
     </div>
 </div>
 
-<?php include "footer.php" ?>
+<?php get_footer() ?>
